@@ -1,0 +1,244 @@
+Exerc 1
+
+ package com.mycompany.algoritimos;
+
+/**
+ *
+ * @author ale
+ */
+public class AlgoritimosAdo {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+Exerc 2
+
+package com.mycompany.algoritimosado;
+
+import java.util.Scanner;
+/**
+ *
+ * @author ale
+ */
+public class AlgoritimosAdo {
+
+  public static void main(String[] args) {
+    Scanner ent = new Scanner(System.in);
+
+    System.out.println(" Aluno informe seu nome completo:");
+    String n = ent.nextLine();
+    
+    if(n != null && !n.isEmpty() ){
+        String nome = n.split(" ")[0];
+    int tm = n.split(" ").length;
+    String sobre = n.split(" ")[tm-1];
+
+  String nomeCompleto = nome + " " + sobre;
+  System.out.println("Seja bem vindo" + " " + nomeCompleto + "" + " a escola Exato");
+  
+  }else if ( n == null || n.isEmpty() ){
+    System.out.println("digite algo");
+  }
+
+}
+
+}
+
+exerc 3
+
+package com.mycompany.algoritimosado;
+
+
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author ale
+ */
+
+
+public class Ex3 {
+    
+  public static void main(String[] args) {
+
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Digite um numero:");
+    int n1 = input.nextInt();
+
+    System.out.println("Digite o outro numero:");
+    int n2 = input.nextInt();
+
+    int x = Seque(n1, n2);
+     
+    System.out.println(x);
+
+
+  }
+
+  public static int Seque(int n1, int n2) {
+    int i = 0;
+
+
+    for (i = n1; i < n2; i++)
+
+
+        if(i % 2 == 0 ){
+
+
+                System.out.println(" o número é Par:" + i);
+
+
+        }else if(i % 2 == 1){
+
+
+            System.out.println(" o número é Impar:" + i);
+
+
+        }
+  
+    return i;
+  }
+
+
+}
+
+for para criar a sequencia e o if/else para fazer a verificação,
+
+  for porque é uma estrutura de repetição na qual seu ciclo será executado por um tempo ou condição pré-determinados  e por que o for lida melhor com números.
+
+  if/else porque é uma estrutura de condição em que uma expressão booleana é analisada. Quando a condição que estiver dentro do if for verdadeira, ela é executada, mas utilizei ela para fazer as duas verificações.
+
+
+Exerc 4
+
+package com.mycompany.algoritimosado;
+import java.util.Scanner;
+/**
+ *
+ * @author ale
+ */
+
+public class Ex4 {
+public static void main(String[] args) {
+    try {
+      Scanner scanner = new Scanner(System.in);
+
+      System.out.println("Prefeitura do Rio de Janeiro. \n");
+
+      System.out.println("Digite o valor salário bruto: ");
+      double  sala= scanner.nextDouble();
+
+      System.out.println("Digite o valor da prestação: ");
+      double pres = scanner.nextDouble();
+
+      String x = calculo(sala, pres);
+
+      System.out.println(x);
+    } catch (Exception ex) {
+      System.out.println("Algo deu errado: " + ex.toString());
+    }
+  }
+
+  public static String calculo(double sala, double pres) {
+    String emprest = "";
+
+    if (pres <= ((sala * 30) / 100)) {
+      emprest = "Parabéns, o empréstimo pode ser concedido!";
+    } else if (pres <= ((sala * 50) / 100)) {
+      emprest = "Infelizmente o empréstimo não pode ser concedido!";
+    } else if (pres<= ((sala * 80) / 100)) {
+      emprest = "Infelizmente o empréstimo não pode ser concedido!";
+    } else if (pres > ((sala * 80) / 100) && pres <= ((sala * 100) / 100)) {
+      emprest = "Infelizmente o empréstimo não pode ser concedido!";
+    } 
+    return emprest;
+  }
+}
+
+exercicio 5
+
+O if/else é uma estrutura de condição em que uma expressão booleana é analisada. Quando a condição que estiver dentro do if for verdadeira, ela é executada. Já o else é utilizado para definir o que é executado quando a condição analisada pelo if for falsa. Caso o if seja verdadeiro e, consequentemente executado, o else não é executado. ja a estrutura condicional switch/case vem como alternativa em momentos em que temos que utilizar múltiplos ifs no código. Múltiplos if/else encadeados tendem a tornar o código muito extenso e pouco legível.
+
+O switch/case testa o valor contido em uma variável, realizando uma comparação com cada uma das opções. Cada uma dessas possíveis opções é delimitada pela instrução case.
+
+Podemos ter quantos casos de análise forem necessários e, quando um dos valores corresponder ao da variável, o código do case correspondente será executado. Caso a variável não corresponda a nenhum dos casos testados, o último bloco será executado, chamado de default .
+
+
+
+
+Ex: if/else
+
+public class Main{
+ 
+    public static void main(String[] args) {
+        int valor = 15 ;
+        if (valor == 15) { // Se a variável for igual a 15, ele entra aqui
+           
+            System.out.println(“Você acertou!”);
+
+
+        } else { // Caso contrário, ele entra aqui
+           
+            System.out.println(“ :0 ”);
+
+
+        }
+    }
+ 
+}
+
+Ex: switch
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        int mes = 7;
+        switch (mes) {
+            case 1:
+                System.out.println(“O mês é janeiro”);
+                break;
+            case 2:
+                System.out.println(“O mês é fevereiro”);
+                break;
+            case 3:
+                System.out.println(“O mês é março”);
+                break;
+            case 4:
+                System.out.println(“O mês é abril”);
+                break;
+            case 5:
+                System.out.println(“O mês é maio”);
+                break;
+            case 6:
+                System.out.println(“O mês é junho”);
+                break;
+            case 7:
+                System.out.println(“O mês é julho”);
+                break;
+            case 8:
+                System.out.println(“O mês é agosto”);
+                break;
+            case 9:
+                System.out.println(“O mês é setembro”);
+                break;
+            case 10:
+                System.out.println(“O mês é outubro”);
+                break;
+            case 11:
+                System.out.println(“O mês é novembro”);
+                break;
+            case 12:
+                System.out.println(“O mês é dezembro”);
+                break;
+            default:
+                System.out.println(“Mês inválido”);
+                break;
+        }
+    }
+ 
+}
